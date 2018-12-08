@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Griveance", "Griveance\Griveance.csproj", "{9FE29841-3E1C-4144-8E05-A4CA7CC9C676}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Griveance.Tests", "Griveance.Tests\Griveance.Tests.csproj", "{712BD074-7A41-490D-B402-5EB5F74CA20C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FE29841-3E1C-4144-8E05-A4CA7CC9C676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FE29841-3E1C-4144-8E05-A4CA7CC9C676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FE29841-3E1C-4144-8E05-A4CA7CC9C676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FE29841-3E1C-4144-8E05-A4CA7CC9C676}.Release|Any CPU.Build.0 = Release|Any CPU
+		{712BD074-7A41-490D-B402-5EB5F74CA20C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{712BD074-7A41-490D-B402-5EB5F74CA20C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{712BD074-7A41-490D-B402-5EB5F74CA20C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{712BD074-7A41-490D-B402-5EB5F74CA20C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6CD7D1E1-B71F-44E2-BA71-4096497D36ED}
+	EndGlobalSection
+EndGlobal
