@@ -425,6 +425,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\ClassYearController.cs" />
+    <Compile Include="API\CommonController.cs" />
+    <Compile Include="API\CourseController.cs" />
+    <Compile Include="API\GrievanceController.cs" />
+    <Compile Include="API\MemberController.cs" />
+    <Compile Include="API\RegisterController.cs" />
+    <Compile Include="API\UsersController.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -452,6 +459,8 @@
     <Compile Include="Models\tbl_user.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultModel\Error.cs" />
+    <Compile Include="ResultModel\Result.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
