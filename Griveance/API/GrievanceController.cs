@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Griveance.BusinessLayer;
+using Griveance.ParamModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,5 +11,12 @@ namespace Griveance.Controllers
 {
     public class GrievanceController : ApiController
     {
+        [HttpPost]
+        public object GetAllGrievanceList([FromBody] ParamGetGrievanceList objparam)
+        {
+            GetGrievanceListBL obj = new GetGrievanceListBL();
+            var GetGrievance = obj.GetGrievanceList(objparam);
+                return GetGrievance;
+        }
     }
 }

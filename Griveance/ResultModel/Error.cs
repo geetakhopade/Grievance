@@ -1,5 +1,5 @@
-﻿ 
-namespace MobileSchoolAPI.Models
+﻿
+namespace Griveance.Models
 {
     public class Error
     {
