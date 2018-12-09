@@ -1,3 +1,6 @@
+ 
+using Griveance.BusinessLayer;
+using Griveance.Models;
 using Griveance.BusinessLayer;
 using Griveance.Models;
 using Griveance.ParamModel; 
@@ -14,7 +17,24 @@ namespace Griveance.Controllers
 {
     public class MemberController : ApiController
     {
-        [HttpPost]
+ 
+        [HttpGet]
+        public object GetMemberInfo()
+        {
+            MemberBusiness MBusiness = new MemberBusiness();
+            var member = MBusiness.GetMemberInfo();
+            return member;
+        }
+
+        [HttpPut]
+        public object GetSingleGrievanace([FromBody]ParamMember obj)
+        {
+            MemberBusiness MBusiness = new MemberBusiness();
+            var grievance = MBusiness.GetSingleGrievanace(obj);
+            return grievance;
+        }
+    
+         [HttpPost]
         public object SetIsLiveForMember([FromBody]ParamMember PM)
         {
             try
@@ -51,4 +71,5 @@ namespace Griveance.Controllers
             return Result;
          }
      }
+ 
 }

@@ -6,47 +6,47 @@ namespace Griveance.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("ViewGetSingleParentInfo")]
-    public partial class ViewGetSingleParentInfo
+    [Table("ViewGetMemberInfo")]
+    public partial class ViewGetMemberInfo
     {
-        [StringLength(100)]
-        public string name { get; set; }
-
-        public int? code { get; set; }
-
         [Key]
         [Column(Order = 0)]
-        [StringLength(100)]
-        public string relationship { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int id { get; set; }
 
         [Key]
         [Column(Order = 1)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int code { get; set; }
+
+        [StringLength(100)]
+        public string name { get; set; }
+
+        [Key]
+        [Column(Order = 2)]
+        [StringLength(100)]
+        public string designation { get; set; }
+
+        [Key]
+        [Column(Order = 3)]
+        [StringLength(200)]
+        public string griType { get; set; }
+
+        [Key]
+        [Column(Order = 4)]
         [StringLength(100)]
         public string email { get; set; }
 
         public long? contact { get; set; }
 
         [Key]
-        [Column(Order = 2)]
-        [StringLength(100)]
-        public string type { get; set; }
-
-        [StringLength(20)]
-        public string gender { get; set; }
-
-        [Key]
-        [Column(Order = 3)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int status { get; set; }
-
-        [Key]
-        [Column(Order = 4)]
+        [Column(Order = 5)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Islive { get; set; }
- 
+
         [Key]
-        [Column(Order = 5)]
+        [Column(Order = 6)]
         [StringLength(100)]
         public string password { get; set; }
-     }
+    }
 }
