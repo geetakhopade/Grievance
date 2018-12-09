@@ -31,9 +31,12 @@ namespace Griveance.Models
 		public virtual DbSet<tbl_user> tbl_user { get; set; }
 
         public virtual DbSet<ViewAllStaffInfo> ViewAllStaffInfoes { get; set; }
-
-        public virtual DbSet<ViewGrievanceList> ViewGrievanceLists { get; set; }  
-        public virtual DbSet<ViewGetClassList> ViewGetClassLists { get; set; }
+ 
+        public virtual DbSet<ViewGrievanceList> ViewGrievanceLists { get; set; } 
+		public virtual DbSet<tbl_user> tbl_user { get; set; }
+        public virtual DbSet<Vw_GetSingleFaculty> Vw_GetSingleFaculty { get; set; }
+         public virtual DbSet<ViewGrievanceList> ViewGrievanceLists { get; set; }  
+         public virtual DbSet<ViewGetClassList> ViewGetClassLists { get; set; }
         public virtual DbSet<ViewGetStudentInfo> ViewGetStudentInfoes { get; set; }
 
         public virtual DbSet<ViewGetFacultyInfo> ViewGetFacultyInfoes { get; set; }  
