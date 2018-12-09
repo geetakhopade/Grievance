@@ -466,6 +466,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="DAL\GRContext.cs" />
+    <Compile Include="Models\FacultyParameters.cs" />
     <Compile Include="Models\Member_parameter.cs" />
     <Compile Include="Models\ParamUser.cs" />
     <Compile Include="Models\SetStatusParameters.cs" />
