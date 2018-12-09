@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Griveance.BusinessLayer;
+using Griveance.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,5 +11,12 @@ namespace Griveance.Controllers
 {
     public class MemberController : ApiController
     {
+      [HttpPost]
+        public object GriveanceStatus([FromBody]SetStatusParameters obj)
+        {
+            SetGriveanceStatus Statusobj = new SetGriveanceStatus();
+             var Result = Statusobj.SetStatus(obj);
+            return Result;
+        }
     }
 }

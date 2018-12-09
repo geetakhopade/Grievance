@@ -18,5 +18,12 @@ namespace Griveance.Controllers
             var mygrievance = obj.GetMyGrievance(objmy);
             return mygrievance;
         }
+
+        public object SumbitGrievance([FromBody]ParamSaveGriveance objparam)
+        {
+            PostGriveance obj = new PostGriveance();
+            var result = obj.SaveGrievance(objparam);
+            return result; 
+        }
     }
 }

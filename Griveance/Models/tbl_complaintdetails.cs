@@ -5,7 +5,7 @@ namespace Griveance.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
-
+    [Table("tbl_complaintdetails")]
     public partial class tbl_complaintdetails
     {
         [Key]
