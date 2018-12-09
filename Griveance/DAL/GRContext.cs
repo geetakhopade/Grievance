@@ -25,9 +25,13 @@ namespace Griveance.Models
 		public virtual DbSet<tbl_staff> tbl_staff { get; set; }
 		public virtual DbSet<tbl_student> tbl_student { get; set; }
 		public virtual DbSet<tbl_test> tbl_test { get; set; }
-		public virtual DbSet<tbl_user> tbl_user { get; set; }								     
+		public virtual DbSet<tbl_user> tbl_user { get; set; }
 
-		protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        public virtual DbSet<ViewAllStaffInfo> ViewAllStaffInfoes { get; set; }
+
+        public virtual DbSet<ViewGrievanceList> ViewGrievanceLists { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{ 
 
 		}

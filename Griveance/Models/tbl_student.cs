@@ -23,9 +23,7 @@ namespace Griveance.Models
         [StringLength(100)]
         public string class_name { get; set; }
 
-        [Key]
-        [Column(Order = 3)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        
         public int IsParent { get; set; }
     }
 }

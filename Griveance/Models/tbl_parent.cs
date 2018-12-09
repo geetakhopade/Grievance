@@ -13,9 +13,7 @@ namespace Griveance.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int code { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
-        [StringLength(100)]
+       
         public string relationship { get; set; }
     }
 }

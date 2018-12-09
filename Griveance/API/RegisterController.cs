@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Griveance.BusinessLayer;
+using Griveance.ParamModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,5 +11,12 @@ namespace Griveance.Controllers
 {
     public class RegisterController : ApiController
     {
+        [HttpPost]
+        public object SaveRegistration([FromBody] ParamRegistration PR)
+        {
+            SaveRegistrationBL OBJSAVE = new SaveRegistrationBL();
+            var result = OBJSAVE.SaveRegistration(PR);
+            return result;
+        }
     }
 }
