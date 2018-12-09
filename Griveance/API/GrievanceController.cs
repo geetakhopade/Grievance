@@ -1,5 +1,6 @@
-﻿using Griveance.BusinessLayer;
 using Griveance.Models;
+using Griveance.BusinessLayer; 
+using Griveance.ParamModel; 
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace Griveance.Controllers
 {
 
     public class GrievanceController : ApiController
-    {
+     {
         [HttpGet]
         public object GetUnAssignedGrievanceType()        
         {
@@ -29,5 +30,22 @@ namespace Griveance.Controllers
 
         }
 
-    }
+     
+        [HttpPost]
+        public object GetAllGrievanceList([FromBody] ParamGetGrievanceList objparam)
+        {
+            GetGrievanceListBL obj = new GetGrievanceListBL();
+            var GetGrievance = obj.GetGrievanceList(objparam);
+                return GetGrievance;
+        } 
+
+        [HttpGet]
+        public object GriveanceTypeInfo()
+        {
+            GetGriveanceInfo GetGriveanceTypeInfo = new GetGriveanceInfo();
+            var Result = GetGriveanceTypeInfo.GetGriveanceTypeInfo();
+            
+            return Result;
+        } 
+     }
 }

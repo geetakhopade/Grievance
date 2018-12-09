@@ -6,12 +6,13 @@ namespace Griveance.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class tbl_user
+    [Table("ViewGetFacultyInfo")]
+    public partial class ViewGetFacultyInfo
     {
+        public int? code { get; set; }
+
         [StringLength(100)]
         public string name { get; set; }
-
-        public int? code { get; set; }
 
         [Key]
         [Column(Order = 0)]
@@ -28,19 +29,29 @@ namespace Griveance.Models
 
         public long? contact { get; set; }
 
+        [Key]
+        [Column(Order = 2)]
         [StringLength(100)]
         public string password { get; set; }
 
- 
-        public int? status { get; set; }
-
-        public int? Islive { get; set; }
- 
-       
+        [Key]
+        [Column(Order = 3)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int status { get; set; }
 
-        
+        [Key]
+        [Column(Order = 4)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Islive { get; set; }
- 
+
+        [Key]
+        [Column(Order = 5)]
+        [StringLength(100)]
+        public string department { get; set; }
+
+        [Key]
+        [Column(Order = 6)]
+        [StringLength(100)]
+        public string designation { get; set; }
     }
 }
