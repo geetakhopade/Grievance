@@ -422,7 +422,9 @@
     <Content Include="Scripts\ProjectScript\Setting\DivisionController.js" />
     <Content Include="Scripts\ProjectScript\Setting\EmployeeController.js" />
     <Content Include="Scripts\ProjectScript\Setting\EntityController.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API\ClassYearController.cs" />
@@ -430,12 +432,18 @@
     <Compile Include="API\CourseController.cs" />
     <Compile Include="API\GrievanceController.cs" />
     <Compile Include="API\MemberController.cs" />
+    <Compile Include="API\ParamGetGriecanceList.cs" />
     <Compile Include="API\RegisterController.cs" />
     <Compile Include="API\UsersController.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="BusinessLayer\Class1.cs" />
+    <Compile Include="BusinessLayer\GetClassInfoBL.cs" />
+    <Compile Include="BusinessLayer\GetFacultyInfoBL.cs" />
+    <Compile Include="BusinessLayer\GetGrievanceListBL.cs" />
+    <Compile Include="BusinessLayer\GetMyGrievanceBL.cs" />
+    <Compile Include="BusinessLayer\GetSingleStudentBL.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="API\LoginController.cs" />
@@ -458,6 +466,15 @@
     <Compile Include="Models\tbl_test.cs" />
     <Compile Include="Models\tbl_user.cs" />
     <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Models\ViewGetClassList.cs" />
+    <Compile Include="Models\ViewGetFacultyInfo.cs" />
+    <Compile Include="Models\ViewGetMyGrievance.cs" />
+    <Compile Include="Models\ViewGetStudentInfo.cs" />
+    <Compile Include="Models\ViewGrievanceList.cs" />
+    <Compile Include="ParamModel\ParamGetFacultyInfo.cs" />
+    <Compile Include="ParamModel\ParamGetGrievanceList.cs" />
+    <Compile Include="ParamModel\ParamGetMyGrievance.cs" />
+    <Compile Include="ParamModel\ParamGetSingleStudent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResultModel\Error.cs" />
     <Compile Include="ResultModel\Result.cs" />

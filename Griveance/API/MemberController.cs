@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Griveance.BusinessLayer;
+using Griveance.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -10,7 +12,7 @@ using Griveance.BusinessLayer;
 namespace Griveance.Controllers
 {
     public class MemberController : ApiController
-    {
+    { 
         [HttpPost]
         public object MemberSave([FromBody]Member_parameter member_para)
         {
@@ -25,10 +27,16 @@ namespace Griveance.Controllers
             //  bhobj.StudentsMethod(hobj);
 
             return result;
-
-
-
-
         }
+
+
+ 
+      [HttpPost]
+        public object GriveanceStatus([FromBody]SetStatusParameters obj)
+        {
+            SetGriveanceStatus Statusobj = new SetGriveanceStatus();
+             var Result = Statusobj.SetStatus(obj);
+            return Result;
+         }
     }
 }
