@@ -1,4 +1,6 @@
 using Griveance.BusinessLayer;
+using Griveance.Models;
+using Griveance.BusinessLayer;
  
 using Griveance.Models;
  
@@ -16,7 +18,14 @@ namespace Griveance.Controllers
     public class UsersController : ApiController
  
     {
-        [HttpGet]
+         [HttpPut]
+        public object GetSingleParentInfo([FromBody]ParamUser code)
+        {
+            UsersBusiness UbObj = new UsersBusiness();
+            var parent = UbObj.GetSingleParentInfo(code);
+            return parent;
+        }
+         [HttpGet]
         public object GetStaffInfo()
         {
             try
@@ -75,5 +84,5 @@ namespace Griveance.Controllers
 
         } 
  
-    }
+     }
 }
