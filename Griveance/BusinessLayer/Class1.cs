@@ -7,5 +7,6 @@ namespace Griveance.BusinessLayer
 {
 	public class Class1
 	{
+		//test
 	}
 }

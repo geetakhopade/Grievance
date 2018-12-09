@@ -7,3 +7,6 @@
 *.ide-shm
 *.ide-wal
 *.suo
+/bin
+/obj
+/Griveance.Tests

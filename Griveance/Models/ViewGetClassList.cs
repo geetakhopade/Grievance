@@ -6,24 +6,16 @@ namespace Griveance.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class tbl_student
+    [Table("ViewGetClassList")]
+    public partial class ViewGetClassList
     {
         [Key]
         [Column(Order = 0)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int code { get; set; }
+        public int class_id { get; set; }
 
         [Key]
         [Column(Order = 1)]
         [StringLength(100)]
-        public string course_name { get; set; }
-
-        [Key]
-        [Column(Order = 2)]
-        [StringLength(100)]
         public string class_name { get; set; }
-
-        
-        public int IsParent { get; set; }
     }
 }
