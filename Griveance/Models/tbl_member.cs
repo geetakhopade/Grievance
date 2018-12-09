@@ -19,5 +19,7 @@ namespace Griveance.Models
         [Required]
         [StringLength(200)]
         public string griType { get; set; }
+
+        
     }
 }
