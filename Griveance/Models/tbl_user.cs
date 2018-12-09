@@ -28,15 +28,19 @@ namespace Griveance.Models
 
         public long? contact { get; set; }
 
-        [Key]
-        [Column(Order = 2)]
         [StringLength(100)]
         public string password { get; set; }
 
+ 
+        public int? status { get; set; }
+
+        public int? Islive { get; set; }
+ 
        
         public int status { get; set; }
 
         
         public int Islive { get; set; }
+ 
     }
 }

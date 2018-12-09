@@ -25,7 +25,12 @@ namespace Griveance.Models
 		public virtual DbSet<tbl_postgriev> tbl_postgriev { get; set; }
 		public virtual DbSet<tbl_staff> tbl_staff { get; set; }
 		public virtual DbSet<tbl_student> tbl_student { get; set; }
-		public virtual DbSet<tbl_test> tbl_test { get; set; }
+		public virtual DbSet<tbl_test> tbl_test { get; set; } 
+		public virtual DbSet<tbl_user> tbl_user { get; set; }
+
+        public virtual DbSet<ViewAllStaffInfo> ViewAllStaffInfoes { get; set; }
+
+        public virtual DbSet<ViewGrievanceList> ViewGrievanceLists { get; set; } 
 		public virtual DbSet<tbl_user> tbl_user { get; set; } 
         public virtual DbSet<ViewGetClassList> ViewGetClassLists { get; set; }
         public virtual DbSet<ViewGetStudentInfo> ViewGetStudentInfoes { get; set; }
@@ -35,7 +40,7 @@ namespace Griveance.Models
         public virtual DbSet<ViewGetMyGrievance> ViewGetMyGrievances { get; set; } 
         public virtual DbSet<ViewAllStaffInfo> ViewAllStaffInfoes { get; set; }
         public virtual DbSet<ViewGetSingleParentInfo> ViewGetSingleParentInfoes { get; set; }
-        public virtual DbSet<ViewGetStudentInfo> ViewGetStudentInfoes { get; set; } 
+        public virtual DbSet<ViewGetStudentInfo> ViewGetStudentInfoes { get; set; }  
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{ 
 
