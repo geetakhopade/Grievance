@@ -439,6 +439,7 @@
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="BusinessLayer\Class1.cs" />
+    <Compile Include="BusinessLayer\CourseBusiness.cs" />
     <Compile Include="BusinessLayer\GetAllStaffInfo.cs" />
     <Compile Include="BusinessLayer\GetClassInfoBL.cs" />
     <Compile Include="BusinessLayer\GetFacultyInfoBL.cs" />
@@ -457,6 +458,7 @@
     <Compile Include="BusinessLayer\SetGriveanceStatus.cs" />
     <Compile Include="BusinessLayer\SetIsLiveForUser.cs" />
     <Compile Include="BusinessLayer\SetMemberStatus.cs" />
+    <Compile Include="BusinessLayer\UsersBusiness.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="API\LoginController.cs" />
@@ -465,6 +467,7 @@
     </Compile>
     <Compile Include="DAL\GRContext.cs" />
     <Compile Include="Models\Member_parameter.cs" />
+    <Compile Include="Models\ParamUser.cs" />
     <Compile Include="Models\SetStatusParameters.cs" />
     <Compile Include="Models\student_parameters.cs" />
     <Compile Include="Models\tbl_class.cs" />
@@ -484,7 +487,9 @@
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Models\ViewAllStaffInfo.cs" />
     <Compile Include="Models\ViewGetClassList.cs" />
+    <Compile Include="Models\ViewGetCourseInfo.cs" />
     <Compile Include="Models\ViewGetFacultyInfo.cs" />
+    <Compile Include="Models\ViewGetMemberInfo.cs" />
     <Compile Include="Models\ViewGetMyGrievance.cs" />
     <Compile Include="Models\ViewGetSingleParentInfo.cs" />
     <Compile Include="Models\ViewGetStudentInfo.cs" />

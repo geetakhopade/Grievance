@@ -37,8 +37,7 @@ namespace Griveance.Models
         public virtual DbSet<ViewGetStudentInfo> ViewGetStudentInfoes { get; set; }
 
         public virtual DbSet<ViewGetFacultyInfo> ViewGetFacultyInfoes { get; set; }  
-        public virtual DbSet<ViewGetMyGrievance> ViewGetMyGrievances { get; set; }  
-        public virtual DbSet<ViewGetSingleParentInfo> ViewGetSingleParentInfoes { get; set; } 
+        public virtual DbSet<ViewGetMyGrievance> ViewGetMyGrievances { get; set; }  	  
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{ 
 

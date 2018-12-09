@@ -36,11 +36,7 @@ namespace Griveance.Models
 
         public int? Islive { get; set; }
  
-       
-        public int status { get; set; }
-
-        
-        public int Islive { get; set; }
+       												   
  
     }
 }

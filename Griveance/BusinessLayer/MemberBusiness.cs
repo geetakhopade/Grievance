@@ -12,7 +12,8 @@ using Griveance.Models;
 using System.Web.Http;
 using Griveance.ResultModel;
 using System.Data.Entity.Validation;
- 
+using Griveance.ParamModel;
+
 namespace Griveance.BusinessLayer
 {
     public class MemberBusiness
@@ -44,7 +45,7 @@ namespace Griveance.BusinessLayer
             GRContext context = new GRContext();
             try
             {
-                var grievance = context.ViewGetMemberInfoes.Where(r => r.code == obj.code).FirstOrDefault();
+                var grievance = context.ViewGetMemberInfoes.Where(r => r.code == obj.Code).FirstOrDefault();
                 if (grievance == null)
                 {
                     return new Result { IsSucess = false, ResultData = "Record Not Found" };
