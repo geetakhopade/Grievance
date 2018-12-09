@@ -33,14 +33,10 @@ namespace Griveance.Models
         [StringLength(100)]
         public string password { get; set; }
 
-        [Key]
-        [Column(Order = 3)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+       
         public int status { get; set; }
 
-        [Key]
-        [Column(Order = 4)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        
         public int Islive { get; set; }
     }
 }
