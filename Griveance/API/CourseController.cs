@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Griveance.ParamModel;
 
 namespace Griveance.Controllers
 {
@@ -18,6 +19,13 @@ namespace Griveance.Controllers
 
             var getCourseInfo= Cbusiness.GetCourseInfo();
             return getCourseInfo;
+        }
+        [HttpPost]
+        public object CreateCourse([FromBody]Course_Parameter course_parameter)
+        {
+            CourseBusiness course_business = new CourseBusiness();
+            var Result = course_business.NewCourse(course_parameter);
+            return Result;
         }
 
        
