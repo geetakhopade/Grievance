@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Griveance.ParamModel;
 
 namespace Griveance.Controllers
 {
@@ -16,6 +17,13 @@ namespace Griveance.Controllers
             GetClassInfoBL Objclass = new GetClassInfoBL();
             var GetClassVar = Objclass.ClassInfoBL();
             return GetClassVar;
+        }
+        [HttpPost]
+        public object Create_class([FromBody]ClassParameter obj)
+        {
+            ClassBusiness classB = new ClassBusiness();
+            var Result = classB.create_class(obj);
+            return Result;
         }
     }
 }
