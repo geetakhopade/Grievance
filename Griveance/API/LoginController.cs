@@ -1,4 +1,5 @@
-﻿using Griveance.Models;
+﻿using Griveance.BusinessLayer;
+using Griveance.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,14 +28,13 @@ namespace Griveance.Controllers
 		[HttpPost]
 		public object ValidateUser(UserCredentialModel userCredentialModel)
 		{
-			GRContext context = new GRContext();
-			var user =  context.tbl_user.FirstOrDefault(r => r.email == userCredentialModel.User 
-							&& r.password == userCredentialModel.Password);
+			
 
-			if (user == null)
-				return "User Id & Password Is Invalid";
-			  
-			return "Success";
+            ValidateUser Validuser = new ValidateUser();
+          var result=  Validuser.IsValidUser(userCredentialModel);
+            return result;
+
+
 		}
     }
 }
