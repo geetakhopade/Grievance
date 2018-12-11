@@ -13,7 +13,7 @@ namespace Griveance.Controllers
 {
     public class CommonController : ApiController
     { 
-        public object ShowHomeWorkAll([FromBody]student_parameters objhome)
+        public object SetLiveUser([FromBody]StudentParameters objhome)
         {
              SetIsLiveForUser obj = new SetIsLiveForUser();
             var homemworkresult = obj.UserLive(objhome);

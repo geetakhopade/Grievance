@@ -16,55 +16,55 @@ namespace Griveance.BusinessLayer
             try
             {
                 tbl_user objuser = new tbl_user();
-                objuser.name = PR.name;
-                objuser.code = PR.code;
-                objuser.type = PR.type;
-                objuser.gender = PR.gender;
-                objuser.email = PR.email;
-                objuser.contact = PR.contact;
-                objuser.password = PR.password;
+                objuser.name = PR.Name;
+                objuser.code = PR.Code;
+                objuser.type = PR.Type;
+                objuser.gender = PR.Gender;
+                objuser.email = PR.Email;
+                objuser.contact = PR.Contact;
+                objuser.password = PR.Password;
                 objuser.status = 1;
                 objuser.Islive = 1;
                 db.tbl_user.Add(objuser);
                 db.SaveChanges();
 
-                if (PR.type == "Student")
+                if (PR.Type == "Student")
                 {
                     tbl_student objstudent = new tbl_student();
-                    objstudent.code = PR.code;
-                    objstudent.course_name = PR.course_name;
-                    objstudent.class_name = PR.class_name;
+                    objstudent.code = PR.Code;
+                    objstudent.course_name = PR.CourseName;
+                    objstudent.class_name = PR.ClassName;
                     objstudent.IsParent = 0;
                     db.tbl_student.Add(objstudent);
                     db.SaveChanges();
                 }
-                else if (PR.type == "Faculty")
+                else if (PR.Type == "Faculty")
                 {
                     tbl_faculty objfaculty = new tbl_faculty();
-                    objfaculty.code = PR.code;
-                    objfaculty.department = PR.department;
-                    objfaculty.designation = PR.designation;
+                    objfaculty.code = PR.Code;
+                    objfaculty.department = PR.Department;
+                    objfaculty.designation = PR.Designation;
                     db.tbl_faculty.Add(objfaculty);
                     db.SaveChanges();
                 }
-                else if (PR.type == "Parent")
+                else if (PR.Type == "Parent")
                 {
                     tbl_parent objparent = new tbl_parent();
-                    objparent.code = PR.code;
-                    objparent.relationship = PR.relationship;
+                    objparent.code = PR.Code;
+                    objparent.relationship = PR.Relationship;
                     db.tbl_parent.Add(objparent);
                     db.SaveChanges();
 
-                    tbl_student objstudent = db.tbl_student.Where(r => r.code == PR.code).FirstOrDefault();
+                    tbl_student objstudent = db.tbl_student.Where(r => r.code == PR.Code).FirstOrDefault();
                     objstudent.IsParent = 1;
                     db.SaveChanges();
                 }
-                else if (PR.type == "Staff")
+                else if (PR.Type == "Staff")
                 {
                     tbl_staff objstaff = new tbl_staff();
-                    objstaff.code = PR.code;
-                    objstaff.department = PR.department;
-                    objstaff.designation = PR.designation;
+                    objstaff.code = PR.Code;
+                    objstaff.department = PR.Department;
+                    objstaff.designation = PR.Designation;
                     db.tbl_staff.Add(objstaff);
                     db.SaveChanges();
                 }

@@ -13,7 +13,7 @@ namespace Griveance.Controllers
     {
 		
 		[HttpGet]
-		public object test()
+		public object Test()
 		{
 			return "test";
 		}
@@ -21,12 +21,12 @@ namespace Griveance.Controllers
 		[HttpGet]
 		public object GetUser()
 		{
-			UserCredentialModel userCredentialModel = new UserCredentialModel() { User = "pradip.chougule@jjmcoe.ac.in" };
+			UserCredentialModel userCredentialModel = new UserCredentialModel() { UserName = "pradip.chougule@jjmcoe.ac.in" };
 			return userCredentialModel;
 		}
 
 		[HttpPost]
-		public object ValidateUser(UserCredentialModel userCredentialModel)
+		public object ValidateUserLogin(UserCredentialModel userCredentialModel)
 		{
 			
 
