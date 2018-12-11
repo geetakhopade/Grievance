@@ -631,11 +631,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="DAL\GRContext.cs" />
-    <Compile Include="Models\FacultyParameters.cs" />
-    <Compile Include="Models\Member_parameter.cs" />
-    <Compile Include="Models\ParamUser.cs" />
-    <Compile Include="Models\SetStatusParameters.cs" />
-    <Compile Include="Models\student_parameters.cs" />
     <Compile Include="Models\tbl_class.cs" />
     <Compile Include="Models\tbl_complaintdetails.cs" />
     <Compile Include="Models\tbl_courses.cs" />
@@ -662,7 +657,9 @@
     <Compile Include="Models\ViewGrievanceList.cs" />
     <Compile Include="Models\Vw_GetSingleFaculty.cs" />
     <Compile Include="ParamModel\ClassParameter.cs" />
-    <Compile Include="ParamModel\Course_Parameter.cs" />
+    <Compile Include="ParamModel\CourseParameter.cs" />
+    <Compile Include="ParamModel\FacultyParameters.cs" />
+    <Compile Include="ParamModel\MemberParameter.cs" />
     <Compile Include="ParamModel\ParamGetFacultyInfo.cs" />
     <Compile Include="ParamModel\ParamGetGrievanceList.cs" />
     <Compile Include="ParamModel\ParamGetMyGrievance.cs" />
@@ -671,7 +668,10 @@
     <Compile Include="ParamModel\ParamMember.cs" />
     <Compile Include="ParamModel\ParamRegistration.cs" />
     <Compile Include="ParamModel\ParamSaveGriveance.cs" />
+    <Compile Include="ParamModel\ParamUser.cs" />
     <Compile Include="ParamModel\ParamUserLogin.cs" />
+    <Compile Include="ParamModel\SetStatusParameters.cs" />
+    <Compile Include="ParamModel\StudentParameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResultModel\Error.cs" />
     <Compile Include="ResultModel\Result.cs" />
@@ -854,7 +854,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>55043</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:55043/</IISUrl>
+          <IISUrl>http://localhost:55044/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
