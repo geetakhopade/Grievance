@@ -21,18 +21,32 @@ namespace Griveance.Controllers
 		[HttpGet]
 		public object GetUser()
 		{
-			UserCredentialModel userCredentialModel = new UserCredentialModel() { UserName = "pradip.chougule@jjmcoe.ac.in" };
-			return userCredentialModel;
+            try
+            {
+                UserCredentialModel userCredentialModel = new UserCredentialModel() { UserName = "pradip.chougule@jjmcoe.ac.in" };
+                return userCredentialModel;
+            }
+            catch (Exception e)
+            {
+                return new Error() { IsError = true, Message = e.Message };
+            }
+			
 		}
 
 		[HttpPost]
 		public object ValidateUserLogin(UserCredentialModel userCredentialModel)
 		{
-			
 
-            ValidateUser Validuser = new ValidateUser();
-          var result=  Validuser.IsValidUser(userCredentialModel);
-            return result;
+            try
+            {
+                ValidateUser Validuser = new ValidateUser();
+                var result = Validuser.IsValidUser(userCredentialModel);
+                return result;
+            }
+            catch(Exception e)
+            {
+                return new Error() { IsError = true, Message = e.Message };
+            }
 
 
 		}

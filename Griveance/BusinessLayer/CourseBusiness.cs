@@ -31,18 +31,27 @@ namespace Griveance.BusinessLayer
         }
         public object NewCourse([FromBody]CourseParameter obje)
         {
-            GRContext db = new GRContext();
-            tbl_courses objcourse = new tbl_courses();
-           // objcourse.course_id = obje.Course_id;
-            objcourse.course_name = obje.CourseName.ToString();
-            db.tbl_courses.Add(objcourse);
-            db.SaveChanges();
-            return new Result
+            try
             {
+                GRContext db = new GRContext();
+                tbl_courses objcourse = new tbl_courses();
+                // objcourse.course_id = obje.Course_id;
+                objcourse.course_name = obje.CourseName.ToString();
+                db.tbl_courses.Add(objcourse);
+                db.SaveChanges();
+                return new Result
+                {
 
-                IsSucess = true,
-                ResultData = "Course Created!"
-            };
+                    IsSucess = true,
+                    ResultData = "Course Created!"
+                };
+            }
+            catch(Exception e)
+            {
+                return new Error() { IsError = true, Message = e.Message };
+
+            }
+           
 
         }
     }

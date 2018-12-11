@@ -12,10 +12,16 @@ namespace Griveance.BusinessLayer
         GRContext db = new GRContext();
         public object GetGriveanceTypeInfo()
         {
-            //var GriveanceType = (from s in db.tbl_grievance_list
-            //                    select s).ToList();
-            var GriveanceType =  db.tbl_grievance_list.ToList();
-            return new Result() { IsSucess = true, ResultData = GriveanceType };
+            try
+            {
+                var GriveanceType = db.tbl_grievance_list.ToList();
+                return new Result() { IsSucess = true, ResultData = GriveanceType };
+            }
+            catch(Exception e)
+            {
+                return new Error { IsError = true, Message = e.Message };
+            }
+            
            
         }
     }

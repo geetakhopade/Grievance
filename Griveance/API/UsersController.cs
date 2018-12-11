@@ -21,9 +21,17 @@ namespace Griveance.Controllers
          [HttpPut]
         public object GetSingleParentInfo([FromBody]ParamUser code)
         {
-            UsersBusiness UbObj = new UsersBusiness();
-            var parent = UbObj.GetSingleParentInfo(code);
-            return parent;
+            try
+            {
+                UsersBusiness UbObj = new UsersBusiness();
+                var parent = UbObj.GetSingleParentInfo(code);
+                return parent;
+            }
+            catch(Exception e)
+            {
+                return new Error() { IsError = true, Message = e.Message };
+            }
+            
         }
          [HttpGet]
         public object GetStaffInfo()
@@ -44,43 +52,83 @@ namespace Griveance.Controllers
         [HttpPost]
         public object GetSingleStudentInfo([FromBody]ParamGetSingleStudent objstudent)
         {
-            GetSingleStudentBL obj = new GetSingleStudentBL();
-            var singlestudentresult = obj.GetSingleStudent(objstudent);
-            return singlestudentresult;
+            try
+            {
+                GetSingleStudentBL obj = new GetSingleStudentBL();
+                var singlestudentresult = obj.GetSingleStudent(objstudent);
+                return singlestudentresult;
+            }
+            catch(Exception e)
+            {
+                return new Error() { IsError = true, Message = e.Message };
+            }
+            
         }
 
 
         [HttpPost]
         public object GetFacultyInfo([FromBody]ParamGetFacultyInfo objfaculty)
         {
-            GetFacultyInfoBL obj = new GetFacultyInfoBL();
-            var facultyinfo = obj.GetFacultyInfo(objfaculty);
-            return facultyinfo;
+            try
+            {
+                GetFacultyInfoBL obj = new GetFacultyInfoBL();
+                var facultyinfo = obj.GetFacultyInfo(objfaculty);
+                return facultyinfo;
+            }
+            catch(Exception e)
+            {
+                return new Error() { IsError = true, Message = e.Message };
+            }
+           
         } 
 
         [HttpPost]
         public object GetStudentInfo([FromBody]ParamUserLogin obj)
         {
-            GetStudentData objStudent = new GetStudentData();
-            var result = objStudent.GetStudentList();
-            return result;
+            try
+            {
+                GetStudentData objStudent = new GetStudentData();
+                var result = objStudent.GetStudentList();
+                return result;
+            }
+            catch(Exception e)
+            {
+                return new Error() { IsError = true, Message = e.Message };
+            }
+           
 
         }
         [HttpPost]
         public object GetParentInfo([FromBody]ParamUserLogin obj)
         {
-            GetParentData objParent = new GetParentData();
-            var result = objParent.GetParentList();
-            return result;
+            try
+            {
+                GetParentData objParent = new GetParentData();
+                var result = objParent.GetParentList();
+                return result;
+            }
+            catch(Exception e)
+            {
+                return new Error() { IsError = true, Message = e.Message };
+            }
+            
 
         }
 
         [HttpPost]
         public object GetSingleStaff([FromBody]ParamGetSingleStaffInfo obj)
         {
-            GetSingleStaffData objstaff = new GetSingleStaffData();
-            var result = objstaff.GetSingleStaffValue(obj);
-            return result;
+            try
+            {
+                GetSingleStaffData objstaff = new GetSingleStaffData();
+                var result = objstaff.GetSingleStaffValue(obj);
+                return result;
+            }
+            catch(Exception e)
+            {
+                return new Error() { IsError = true, Message = e.Message };
+            }
+           
 
         } 
  

@@ -11,20 +11,29 @@ namespace Griveance.BusinessLayer
 {
     public class ClassBusiness
     {
-        public object create_class([FromBody]ClassParameter obj)
+        public object CreateClass([FromBody]ClassParameter obj)
         {
-            GRContext db = new GRContext();
-            tbl_class tbl_member = new tbl_class();
-            tbl_member.class_name = obj.ClassName.ToString();
-            tbl_member.course_name = obj.CourseName.ToString();
-            db.tbl_class.Add(tbl_member);
-            db.SaveChanges();
-            return new Result
+            try
             {
+                GRContext db = new GRContext();
+                tbl_class tbl_member = new tbl_class();
+                tbl_member.class_name = obj.ClassName.ToString();
+                tbl_member.course_name = obj.CourseName.ToString();
+                db.tbl_class.Add(tbl_member);
+                db.SaveChanges();
+                return new Result
+                {
 
-                IsSucess = true,
-                ResultData = "Class Created!"
-            };
+                    IsSucess = true,
+                    ResultData = "Class Created!"
+                };
+            }
+            catch(Exception e)
+            {
+                return new Error() { IsError = true, Message = e.Message };
+
+            }
+
         }
     }
 }

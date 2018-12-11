@@ -34,18 +34,32 @@ namespace Griveance.Controllers
         [HttpPost]
         public object GetAllGrievanceList([FromBody] ParamGetGrievanceList objparam)
         {
-            GetGrievanceListBL obj = new GetGrievanceListBL();
-            var GetGrievance = obj.GetGrievanceList(objparam);
+            try
+            {
+                GetGrievanceListBL obj = new GetGrievanceListBL();
+                var GetGrievance = obj.GetGrievanceList(objparam);
                 return GetGrievance;
+            }
+           catch(Exception e)
+            {
+                return new Error() { IsError = true, Message = e.Message };
+            }
         } 
 
         [HttpGet]
         public object GriveanceTypeInfo()
         {
-            GetGriveanceInfo GetGriveanceTypeInfo = new GetGriveanceInfo();
-            var Result = GetGriveanceTypeInfo.GetGriveanceTypeInfo();
+            try
+            {
+                GetGriveanceInfo GetGriveanceTypeInfo = new GetGriveanceInfo();
+                var Result = GetGriveanceTypeInfo.GetGriveanceTypeInfo();
+                return Result;
+            }
+            catch(Exception e)
+            {
+                return new Error() { IsError = true, Message = e.Message };
+            }
             
-            return Result;
         } 
      }
 }

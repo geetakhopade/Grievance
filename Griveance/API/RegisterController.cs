@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Griveance.Models;
 
 namespace Griveance.Controllers
 {
@@ -14,9 +15,17 @@ namespace Griveance.Controllers
         [HttpPost]
         public object SaveRegistration([FromBody] ParamRegistration PR)
         {
-            SaveRegistrationBL OBJSAVE = new SaveRegistrationBL();
-            var result = OBJSAVE.SaveRegistration(PR);
-            return result;
+            try
+            {
+                SaveRegistrationBL OBJSAVE = new SaveRegistrationBL();
+                var result = OBJSAVE.SaveRegistration(PR);
+                return result;
+            }
+            catch(Exception e)
+            {
+                return new Error() { IsError = true, Message = e.Message };
+            }
+           
         }
     }
 }
