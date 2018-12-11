@@ -6,6 +6,7 @@ using Griveance.Models;
 using System.Web.Http;
 using Griveance.ResultModel;
 using System.Data.Entity.Validation;
+using Griveance.ParamModel;
 namespace Griveance.BusinessLayer
 {
     public class SetIsLiveForUser
