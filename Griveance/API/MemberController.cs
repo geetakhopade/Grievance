@@ -51,7 +51,7 @@ namespace Griveance.Controllers
         }
    
         [HttpPost]
-        public object MemberSave([FromBody]Member_parameter member_para)
+        public object MemberSave([FromBody]MemberParameter member_para)
         {
 
             MemberBusiness memberbus = new MemberBusiness();

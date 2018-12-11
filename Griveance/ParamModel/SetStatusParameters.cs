@@ -7,8 +7,10 @@ namespace Griveance.Models
 {
     public class SetStatusParameters
     {
-        public int CompID { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public int CompId { get; set; }
         public string GrievanceAction { get; set; }
-        public string status { get; set; }
+        public string Status { get; set; }
     }
 }

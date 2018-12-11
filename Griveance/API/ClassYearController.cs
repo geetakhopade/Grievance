@@ -19,7 +19,7 @@ namespace Griveance.Controllers
             return GetClassVar;
         }
         [HttpPost]
-        public object Create_class([FromBody]ClassParameter obj)
+        public object CreateClass([FromBody]ClassParameter obj)
         {
             ClassBusiness classB = new ClassBusiness();
             var Result = classB.create_class(obj);

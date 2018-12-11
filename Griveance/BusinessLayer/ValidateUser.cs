@@ -13,7 +13,7 @@ namespace Griveance.BusinessLayer
         public object IsValidUser(UserCredentialModel userCredentialModel)
         {
 
-            var user = db.tbl_user.FirstOrDefault(r => r.email == userCredentialModel.User
+            var user = db.tbl_user.FirstOrDefault(r => r.email == userCredentialModel.UserName
                       && r.password == userCredentialModel.Password);
 
             if (user == null)

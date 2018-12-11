@@ -21,7 +21,7 @@ namespace Griveance.Controllers
             return getCourseInfo;
         }
         [HttpPost]
-        public object CreateCourse([FromBody]Course_Parameter course_parameter)
+        public object CreateCourse([FromBody]CourseParameter course_parameter)
         {
             CourseBusiness course_business = new CourseBusiness();
             var Result = course_business.NewCourse(course_parameter);

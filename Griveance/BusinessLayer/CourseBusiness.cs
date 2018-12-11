@@ -29,7 +29,7 @@ namespace Griveance.BusinessLayer
                 return new Error { IsError = true, Message = ex.Message };
             }
         }
-        public object NewCourse([FromBody]Course_Parameter obje)
+        public object NewCourse([FromBody]CourseParameter obje)
         {
             GRContext db = new GRContext();
             tbl_courses objcourse = new tbl_courses();

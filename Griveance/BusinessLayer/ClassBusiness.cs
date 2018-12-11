@@ -15,8 +15,8 @@ namespace Griveance.BusinessLayer
         {
             GRContext db = new GRContext();
             tbl_class tbl_member = new tbl_class();
-            tbl_member.class_name = obj.class_name.ToString();
-            tbl_member.course_name = obj.course_name.ToString();
+            tbl_member.class_name = obj.ClassName.ToString();
+            tbl_member.course_name = obj.CourseName.ToString();
             db.tbl_class.Add(tbl_member);
             db.SaveChanges();
             return new Result
