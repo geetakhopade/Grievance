@@ -17,6 +17,7 @@ namespace Griveance.Controllers
         {
             try
             {
+
                 SetIsLiveForUser obj = new SetIsLiveForUser();
                 var homemworkresult = obj.UserLive(objhome);
                 return homemworkresult;

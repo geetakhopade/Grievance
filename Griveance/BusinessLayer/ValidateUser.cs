@@ -12,18 +12,25 @@ namespace Griveance.BusinessLayer
         GRContext db = new GRContext();
         public object IsValidUser(UserCredentialModel userCredentialModel)
         {
-
-            var user = db.tbl_user.FirstOrDefault(r => r.email == userCredentialModel.UserName
-                      && r.password == userCredentialModel.Password);
-
-            if (user == null)
+            try
             {
-                return new Error() { IsError = true, Message = "Incorrect User Or Password.." };
+                var user = db.tbl_user.FirstOrDefault(r => r.email == userCredentialModel.UserName
+                     && r.password == userCredentialModel.Password);
+
+                if (user == null)
+                {
+                    return new Error() { IsError = true, Message = "Incorrect User Or Password.." };
+                }
+                else
+                {
+                    return new Result() { IsSucess = true, ResultData = "Login Successfully.." };
+                }
             }
-            else
+            catch(Exception e)
             {
-                return new Result() { IsSucess = true, ResultData = "Login Successfully.." };
+                return new Error { IsError = true, Message = e.Message };
             }
+           
 
            
            

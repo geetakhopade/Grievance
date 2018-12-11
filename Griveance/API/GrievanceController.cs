@@ -17,7 +17,7 @@ namespace Griveance.Controllers
         public object GetUnAssignedGrievanceType()        
         {
             try
-            {
+            { 
                 GetUnassignedGrievanceType GT = new GetUnassignedGrievanceType();
                 var GrType = GT.GetUnassignedGrievance();
                 return GrType;

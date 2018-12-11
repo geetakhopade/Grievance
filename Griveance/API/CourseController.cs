@@ -16,6 +16,7 @@ namespace Griveance.Controllers
         public object GetCourseInfo()
         {
             try
+
             {
                 CourseBusiness Cbusiness = new CourseBusiness();
                 var getCourseInfo = Cbusiness.GetCourseInfo();

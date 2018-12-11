@@ -23,6 +23,7 @@ namespace Griveance.Controllers
         {
             try
             {
+
                 UsersBusiness UbObj = new UsersBusiness();
                 var parent = UbObj.GetSingleParentInfo(code);
                 return parent;

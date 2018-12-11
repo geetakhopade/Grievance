@@ -13,16 +13,23 @@ namespace Griveance.BusinessLayer
         GRContext db = new GRContext();
         public object GetFaculty(FacultyParameters obj)
         {
-
-            var ResultGetFaculty = db.Vw_GetSingleFaculty.Where(r => r.code == obj.Code).ToList();
-            if(ResultGetFaculty.Count ==0)
+            try
             {
-                return new Error() { IsError = true, Message = "Faculty Is Not Found" };
+                var ResultGetFaculty = db.Vw_GetSingleFaculty.Where(r => r.code == obj.Code).ToList();
+                if (ResultGetFaculty.Count == 0)
+                {
+                    return new Error() { IsError = true, Message = "Faculty Is Not Found" };
+                }
+                else
+                {
+                    return new Result() { IsSucess = true, ResultData = ResultGetFaculty };
+                }
             }
-            else
+            catch(Exception e)
             {
-                return new Result() { IsSucess = true, ResultData = ResultGetFaculty };
+                return new Error() { IsError = true, Message = e.Message };
             }
+           
                   
            
         }
