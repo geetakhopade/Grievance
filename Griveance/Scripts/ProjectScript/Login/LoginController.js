@@ -28,7 +28,7 @@ function LoginController($scope, Service) {
 
             Service.Post("api/Login/ValidateUser", $scope.UserCredentialModel).then(function (rd) {
                
-                if (rd.data == "Success") { 
+                if (rd.data.IsSucess) { 
                     location.href = baseURL +"Dashboard/Index"
                     
                 } else { 
