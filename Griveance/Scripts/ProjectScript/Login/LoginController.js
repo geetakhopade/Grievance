@@ -7,7 +7,8 @@ function LoginController($scope, Service) {
     $scope.Initialize = function () {
         
         Service.Get("api/Login/GetUser").then(function (result) { 
-            $scope.UserCredentialModel.User = result.data.User
+           
+            $scope.UserCredentialModel.UserName = result.data.UserName
         })
     }
 
@@ -26,10 +27,10 @@ function LoginController($scope, Service) {
             //    $scope.UserCredentialModel.Password = hash.toUpperCase();
             //}
 
-            Service.Post("api/Login/ValidateUser", $scope.UserCredentialModel).then(function (rd) {
+            Service.Post("api/Login/ValidateUserLogin", $scope.UserCredentialModel).then(function (rd) {
                
                 if (rd.data.IsSucess) { 
-                    location.href = baseURL +"Dashboard/Index"
+                    location.href = baseURL +"Admin/Dashboard/Index"
                     
                 } else { 
                     alert(rd.data);

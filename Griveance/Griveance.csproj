@@ -601,6 +601,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MemberController.cs" />
+    <Compile Include="Areas\Admin\Controllers\StudentController.cs" />
+    <Compile Include="Areas\Student\StudentAreaRegistration.cs" />
     <Compile Include="BusinessLayer\Class1.cs" />
     <Compile Include="BusinessLayer\ClassBusiness.cs" />
     <Compile Include="BusinessLayer\CourseBusiness.cs" />
@@ -624,7 +629,6 @@
     <Compile Include="BusinessLayer\SetMemberStatus.cs" />
     <Compile Include="BusinessLayer\UsersBusiness.cs" />
     <Compile Include="BusinessLayer\ValidateUser.cs" />
-    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="API\LoginController.cs" />
     <Compile Include="Global.asax.cs">
@@ -826,6 +830,12 @@
     <Content Include="Content\assets\vendors\base\fonts\summernote\summernote.eot" />
     <Content Include="Content\assets\vendors\base\fonts\summernote\summernote.ttf" />
     <Content Include="Content\assets\vendors\base\fonts\summernote\summernote.woff" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Student\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Dashboard\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\AdminDashboardLayout.cshtml" />
+    <Content Include="Areas\Admin\Views\Student\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Member\Index.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
@@ -839,6 +849,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Student\Controllers\" />
+    <Folder Include="Areas\Student\Models\" />
+    <Folder Include="Areas\Student\Views\Shared\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
