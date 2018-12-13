@@ -22,7 +22,8 @@ namespace Griveance.BusinessLayer
                 objuser.gender = PR.Gender;
                 objuser.email = PR.Email;
                 objuser.contact = PR.Contact;
-                objuser.password = PR.Password;
+                string EncryptedPassword = CryptIt.Encrypt(PR.Password);
+                objuser.password = EncryptedPassword;
                 objuser.status = 1;
                 objuser.Islive = 1;
                 db.tbl_user.Add(objuser);
