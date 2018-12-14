@@ -23,8 +23,7 @@ namespace Griveance.Controllers
         {
             try
             {
-
-                MemberBusiness MBusiness = new MemberBusiness();
+               MemberBusiness MBusiness = new MemberBusiness();
                 var member = MBusiness.GetMemberInfo();
                 return member;
             }
