@@ -51,7 +51,7 @@ namespace Griveance.Controllers
         {
             try
             {
-             GetGriveanceInfo GetGriveanceTypeInfo = new GetGriveanceInfo();
+                GetGriveanceInfo GetGriveanceTypeInfo = new GetGriveanceInfo();
                 var Result = GetGriveanceTypeInfo.GetGriveanceTypeInfo();
                 return Result;
             }

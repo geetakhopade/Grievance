@@ -17,6 +17,7 @@ namespace Griveance.Controllers
         {
             try
             {
+
                 SaveRegistrationBL OBJSAVE = new SaveRegistrationBL();
                 var result = OBJSAVE.SaveRegistration(PR);
                 return result;

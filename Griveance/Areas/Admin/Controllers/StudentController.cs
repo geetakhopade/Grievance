@@ -13,9 +13,5 @@ namespace Griveance.Areas.Admin.Controllers
         {
             return View();
         }
-        public ActionResult StudentDeactive()
-        {
-            return View();
-        }
     }
 }

@@ -16,6 +16,7 @@ namespace Griveance.Controllers
         public object GetCourseInfo()
         {
             try
+
             {
                 CourseBusiness Cbusiness = new CourseBusiness();
                 var getCourseInfo = Cbusiness.GetCourseInfo();
@@ -33,7 +34,7 @@ namespace Griveance.Controllers
         {
             try
             {
-               CourseBusiness course_business = new CourseBusiness();
+                CourseBusiness course_business = new CourseBusiness();
                 var Result = course_business.NewCourse(course_parameter);
                 return Result;
             }
