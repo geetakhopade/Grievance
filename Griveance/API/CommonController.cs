@@ -48,7 +48,7 @@ namespace Griveance.Controllers
         {
             try
             {
-                PostGriveance obj = new PostGriveance();
+               PostGriveance obj = new PostGriveance();
                 var result = obj.SaveGrievance(objparam);
                 return result;
             }

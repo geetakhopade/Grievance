@@ -6,14 +6,10 @@ using System.Web.Mvc;
 
 namespace Griveance.Areas.Admin.Controllers
 {
-    public class StudentController : Controller
+    public class ParentController : Controller
     {
-        // GET: Admin/Student
+        // GET: Admin/Parent
         public ActionResult Index()
-        {
-            return View();
-        }
-        public ActionResult StudentDeactive()
         {
             return View();
         }

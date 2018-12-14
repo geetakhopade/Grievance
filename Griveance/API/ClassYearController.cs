@@ -32,7 +32,6 @@ namespace Griveance.Controllers
         {
             try
             {
-
                 ClassBusiness classB = new ClassBusiness();
                 var Result = classB.CreateClass(obj);
                 return Result;
